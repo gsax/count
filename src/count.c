@@ -9,8 +9,8 @@
 
 void listdir(char *dir)
 {
-	int file_count = 0;
-	int dir_count = 0;
+	size_t file_count = 0;
+	size_t dir_count = 0;
 	const struct dirent *dp;
 	struct stat statbuf;
 	DIR *fd;
@@ -39,8 +39,8 @@ void listdir(char *dir)
 			dir_count++;
 	}
 	closedir(fd);
-	printf("files: %d\n", file_count);
-	printf("dirs:  %d\n", dir_count);
+	printf("files: %zu\n", file_count);
+	printf("dirs:  %zu\n", dir_count);
 }
 
 int main(int argc, char *argv[])
