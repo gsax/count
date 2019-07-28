@@ -24,7 +24,7 @@ void listdir(char *dir)
 		return;
 	}
 
-	while ((dp = readdir(fd)) != NULL) {
+	while ((dp = readdir(fd))) {
 		char *fullpath = malloc(arglen + strlen(dp->d_name) + 2);
 
 		sprintf(fullpath, "%s/%s", dir, dp->d_name);
